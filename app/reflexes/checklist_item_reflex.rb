@@ -3,6 +3,7 @@
 class ChecklistItemReflex < ApplicationReflex
 
   def create
+    # binding.pry
     notebook = current_user.notebooks.find(params[:notebook_id])
     page = notebook.pages.find(params[:page_id])
     checklist = page.checklists.find(params[:checklist_id])
